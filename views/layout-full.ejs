@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- jquery plugin -->
+    <script href="/static/lib/jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- bootstrap plugin -->
+    <link type="text/css" rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+    <script href="/static/lib/bootstrap/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <%- include("./pages/"+route)%>
+    <script src="/static/scripts/auth.js"></script>
+</body>
+
+</html>

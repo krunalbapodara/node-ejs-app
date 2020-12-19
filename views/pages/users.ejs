@@ -1,0 +1,52 @@
+<div>
+    <div class="d-flex justify-content-between mb-4">
+        <h1>users</h1>
+        <button type="button" class="btn btn-primary" id="userModalButton">Add User</button>
+    </div>
+    <div class="mb-4">
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <td>No.</td>
+                    <td>Name</td>
+                    <td>Contact</td>
+                    <td>Email</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <%users.forEach(function(el,ind){%>
+                    <tr>
+                        <td><%=ind + 1%></td>
+                        <td><%=el.firstName + " " + el.lastName%></td>
+                        <td><%=el.contact%></td>
+                        <td><%=el.email%></td>
+                        <td>
+                            <i class="fa fa-trash"  aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                <% })%>
+            </tbody>
+        </table>        
+    </div>
+
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="userModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
